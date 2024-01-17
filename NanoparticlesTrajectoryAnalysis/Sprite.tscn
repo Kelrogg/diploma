@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5rxncbd2tifc"]
+
+[ext_resource type="Script" path="res://NanoBall.cs" id="1_3q16s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3rq50"]
+radius = 0.1
+
+[node name="Sprite" type="Node3D"]
+
+[node name="NanoBall" type="CharacterBody3D" parent="."]
+script = ExtResource("1_3q16s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NanoBall"]
+shape = SubResource("SphereShape3D_3rq50")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="NanoBall"]
+radius = 0.1
